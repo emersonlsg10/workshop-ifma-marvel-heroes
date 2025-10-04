@@ -30,4 +30,8 @@ Route::get('/', function () {
 });
 
 // Rotas CRUD de Heróis
-Route::apiResource('heroes', HeroController::class);
+Route::get('/heroes', [HeroController::class, 'index']); // Listar todos os heróis
+Route::post('/heroes', [HeroController::class, 'store']); // Criar novo herói
+Route::get('/heroes/{id}', [HeroController::class, 'show']); // Buscar herói específico
+Route::put('/heroes/{id}', [HeroController::class, 'update']); // Atualizar herói
+Route::delete('/heroes/{id}', [HeroController::class, 'destroy']); // Deletar herói

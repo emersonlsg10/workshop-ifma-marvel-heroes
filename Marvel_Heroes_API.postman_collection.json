@@ -1,0 +1,96 @@
+{
+  "info": {
+    "name": "Marvel Heroes API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Listar Heróis",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/heroes",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "heroes"]
+        }
+      }
+    },
+    {
+      "name": "Criar Herói",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nome\": \"Thor\",\n  \"habilidade\": \"Deus do Trovão com Mjolnir\",\n  \"classificacao\": \"S\",\n  \"ponto_fraco\": \"Orgulho\",\n  \"filme\": \"Thor (2011)\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/heroes",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "heroes"]
+        }
+      }
+    },
+    {
+      "name": "Buscar Herói",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/heroes/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "heroes", "1"]
+        }
+      }
+    },
+    {
+      "name": "Atualizar Herói",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"classificacao\": \"S+\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/heroes/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "heroes", "1"]
+        }
+      }
+    },
+    {
+      "name": "Deletar Herói",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/heroes/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "heroes", "1"]
+        }
+      }
+    }
+  ]
+}

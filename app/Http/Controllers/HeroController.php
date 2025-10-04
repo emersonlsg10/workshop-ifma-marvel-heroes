@@ -12,22 +12,9 @@ class HeroController extends Controller
      * Listar todos os heróis
      * GET /api/heroes
      */
-    public function index(Request $request): JsonResponse
+    public function index(): JsonResponse
     {
         $query = Hero::query();
-
-        // Filtro por classificação
-        if ($request->has('classificacao')) {
-            $query->where('classificacao', $request->classificacao);
-        }
-
-        // Busca por nome
-        if ($request->has('busca')) {
-            $query->where('nome', 'like', '%' . $request->busca . '%');
-        }
-
-        // Ordenação
-        $query->orderBy('created_at', 'desc');
 
         $heroes = $query->get();
 
