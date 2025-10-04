@@ -26,8 +26,8 @@ API RESTful para cadastro e gerenciamento de heróis da Marvel, desenvolvida em 
 ### 1. Clonar o repositório
 
 ```bash
-git clone https://github.com/seu-usuario/marvel-heroes-api.git
-cd marvel-heroes-api
+git clone https://github.com/emersonlsg10/workshop-ifma-marvel-heroes.git
+cd workshop-ifma-marvel-heroes
 ```
 
 ### 2. Instalar dependências
