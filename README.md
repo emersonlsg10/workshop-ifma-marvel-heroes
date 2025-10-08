@@ -43,7 +43,7 @@ cp .env.example .env
 php artisan key:generate
 ```
 
-### 4. Criar banco de dados SQLite
+### 4. Criar banco de dados SQLite (Não precisa, pois já foi criado)
 
 **No PowerShell:**
 ```powershell
